@@ -1,9 +1,7 @@
-=begin
-Create class Teacher with the following:
-Inherits from Person.
-Constructor extends parent's constructor by adding @specialization and a parameter for it.
-Override can_use_services? so it always returns true.
-=end
+# Create class Teacher with the following:
+# Inherits from Person.
+# Constructor extends parent's constructor by adding @specialization and a parameter for it.
+# Override can_use_services? so it always returns true.
 require './src/person'
 
 class Teacher < Person
@@ -16,4 +14,3 @@ class Teacher < Person
     true
   end
 end
-

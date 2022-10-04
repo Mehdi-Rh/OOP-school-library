@@ -5,8 +5,8 @@
 require './src/person'
 
 class Student < Person
-  def initialize(classroom, id, age, name = 'Unknown', parent_permission: true)
-    super(name, age, parent_permission)
+  def initialize(classroom, age, name = 'Unknown', parent_permission: false)
+    super(age, name, parent_permission)
     @classroom = classroom
   end
 
@@ -14,8 +14,3 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 end
-
-me = Student.new('Micro', 30, true, 'Mehdi')
-
-puts me.name
-puts me.age
