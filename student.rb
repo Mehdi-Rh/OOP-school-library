@@ -2,7 +2,7 @@
 # Inherits from Person.
 # Constructor extends parent's constructor by adding @classroom and a parameter for it.
 # Method play_hooky that returns "¯\(ツ)/¯".
-require './src/person'
+require './person'
 
 class Student < Person
   def initialize(classroom, age, name = 'Unknown', parent_permission: false)

@@ -1,4 +1,10 @@
-class Person
+require './nameable'
+require './base_decorator'
+require './capitalizeDecorator'
+require './trimmerDecorator'
+
+
+class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: false)
     @id = Time.now.to_i
     @name = name
@@ -16,5 +22,9 @@ class Person
 
   def can_use_services?
     of_age? || @parent_permission
+  end
+
+  def correct_name
+    @name
   end
 end
