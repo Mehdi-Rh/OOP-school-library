@@ -1,11 +1,11 @@
 require './nameable'
 require './base_decorator'
-require './capitalizeDecorator'
-require './trimmerDecorator'
-
+require './capitalize_decorator'
+require './trimmer_decorator'
 
 class Person < Nameable
-  def initialize(age, name = 'Unknown', parent_permission: false)
+  def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
     @id = Time.now.to_i
     @name = name
     @age = age
