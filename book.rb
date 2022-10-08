@@ -1,8 +1,10 @@
+require './rental'
+
 class Book
-  attr_reader :title, :author
-  attr_accessor :rentals
+  attr_accessor :rentals, :id, :title, :author
 
   def initialize(title, author)
+    @id = Random.rand(1..1000)
     @title = title
     @author = author
     @rentals = []
@@ -13,3 +15,7 @@ class Book
     rental.book = self
   end
 end
+
+# book = Book.new("titanic", 'mehdi')
+# puts book.author
+# puts book.rentals
