@@ -2,14 +2,17 @@ require './nameable'
 require './base_decorator'
 require './capitalize_decorator'
 require './trimmer_decorator'
+require './rental'
 
 class Person < Nameable
   attr_accessor :name, :age, :rentals
   attr_reader :id
 
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  # rubocop:todo Style/OptionalBooleanParameter
+  def initialize(age, name = 'Unknown', parent_permission = true)
+    # rubocop:enable Style/OptionalBooleanParameter
     super()
-    @id = Time.now.to_i
+    @id = Random.rand(1..1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
